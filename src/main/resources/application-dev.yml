@@ -1,0 +1,32 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.3.193:3307/tp_music?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  server:
+    MaxFileSize: 50MB
+    MaxRequestSize: 50MB
+    
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss  
+    time-zone: GMT+8
+    
+mybatis:
+  typeAliasesPackage: cn.aaron911.music.domain
+  mapperLocations: classpath:mapper/*.xml
+  
+  
+  
+# MinIo文件服务器
+min:
+  io:
+    endpoint: http://49.232.194.201:9000
+    accessKey: admin
+    secretKey: admin123456  
+
+
+
